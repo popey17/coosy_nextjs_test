@@ -1,0 +1,39 @@
+//文字コードはutf-8
+@charset "UTF-8";
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+figure,p,h1,h2,h3 {
+  margin: 0;
+}
+
+ul,li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  overflow: hidden!important;
+  padding:0 0 116px 0;
+}
+
+.pageWrapper{
+  overflow: hidden;
+}
