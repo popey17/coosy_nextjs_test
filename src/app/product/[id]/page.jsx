@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/app/page.module.scss";
+import styles from "../../../app/page.module.scss";
 
 const itemDetail = async ({params}) => {
 
@@ -18,7 +18,11 @@ const itemDetail = async ({params}) => {
         </figure>
         <div className={styles.itemDetail__information}>
           <h2 className={styles.title}>{itemData.title}</h2>
-          <p className={styles.price}>{itemData.price}$</p>
+          <div className={`${styles.modFlex} ${styles['modFlex--left']}`}>
+            <p className={styles.category}>{itemData.category}</p>
+            <p className={`${styles.status} ${itemData.availabilityStatus === 'Low Stock' ? styles['status--low'] : ''}`}>{itemData.availabilityStatus}</p>
+          </div>
+          <p className={styles.price}>{itemData.price} $</p>
           <p className={styles.brand}>{itemData.brand}</p>
           <p className={styles.description}>{itemData.description}</p>
           <div className={styles.tag__container}>
@@ -28,6 +32,9 @@ const itemDetail = async ({params}) => {
               ))
             }
           </div>
+          <p className={styles.note}>
+            {itemData.returnPolicy}
+          </p>
         </div>
       </div>
 

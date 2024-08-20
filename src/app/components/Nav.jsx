@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react"
 import ThemeToggle from "./parts/ThemeToggle"
-import style from "@/app/page.module.scss"
+import styles from "../page.module.scss"
 import Link from 'next/link'
 
 const Nav = () => {
@@ -15,9 +15,12 @@ const Nav = () => {
 
 
   return (
-    <header className={`${style.header} ${theme === "dark" ? style.dark : ''}`}>
+    <header className={`${styles.header} ${theme === "dark" ? styles.dark : ''}`}>
       <Link href="/">Logo</Link>
-      <ThemeToggle setTheme={setTheme} theme={theme}/>
+      <div className={styles.menuLink}>
+        <Link href="/products/1">Products</Link>
+      </div>
+      {/* <ThemeToggle setTheme={setTheme} theme={theme}/> */}
     </header>
   )
 }

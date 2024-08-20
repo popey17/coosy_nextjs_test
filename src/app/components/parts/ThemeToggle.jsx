@@ -1,4 +1,4 @@
-import style from "@/app/page.module.scss";
+import styles from "../../page.module.scss";
 
 const ThemeToggle = ({ setTheme, theme }) => {
 
@@ -8,7 +8,7 @@ const ThemeToggle = ({ setTheme, theme }) => {
   }
 
   return (
-    <button className={style.themeBtn} onClick={toggleTheme}>
+    <button className={styles.themeBtn} onClick={toggleTheme}>
       {theme === "dark" ? "Light Mode" : "Dark Mode"}
     </button>
   )

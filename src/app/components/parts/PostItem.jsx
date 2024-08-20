@@ -1,8 +1,8 @@
-import style from "@/app/page.module.scss"
+import styles from "../../page.module.scss"
 
 const PostItem = ({children}) => {
   return (
-    <div className={style.postList__item}>
+    <div className={styles.postList__item}>
       { children }
     </div>
   )
